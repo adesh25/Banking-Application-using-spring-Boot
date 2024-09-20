@@ -1,0 +1,8 @@
+package com.demo.service;
+
+import com.demo.entity.Account;
+
+public interface AccountService {
+	Account createAccount(Account  account);
+
+}

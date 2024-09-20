@@ -1,0 +1,37 @@
+package com.demo.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.dto.AccountDto;
+import com.demo.entity.Account;
+import com.demo.mapper.AccountMapper;
+import com.demo.repository.AccountRepository;
+import com.demo.service.AccountService;
+@Service
+public class AccountServiceImpl implements AccountService {
+
+	private AccountRepository accountRepository;
+	
+	
+	
+	
+	public AccountServiceImpl(AccountRepository accountRepository) {
+		
+		this.accountRepository=accountRepository;
+	}
+
+
+
+
+	@Override
+	public AccountDto createAccount(AccountDto accountDto) {
+		Account account =AccountMapper.mapTOAccount(accountDto);
+		Account savedAccount=accountRepository.save(account);
+		return  AccountMapper.mapToAccountDto(savedAccount);
+	}
+}
+
+
+
+
+	

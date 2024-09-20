@@ -1,0 +1,34 @@
+package com.demo.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.dto.AccountDto;
+import com.demo.repository.AccountRepository;
+import com.demo.service.AccountService;
+@Service
+public class AccountServiceImpl implements AccountService {
+
+	private AccountRepository accountRepository;
+	
+	
+	
+	
+	public AccountServiceImpl(AccountRepository accountRepository) {
+		
+		this.accountRepository=accountRepository;
+	}
+
+
+
+
+	@Override
+	public AccountDto createAccount(AccountDto accountDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+
+
+
+
+	

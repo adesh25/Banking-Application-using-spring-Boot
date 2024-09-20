@@ -1,0 +1,17 @@
+package com.demo.mapper;
+
+import com.demo.dto.AccountDto;
+import com.demo.entity.Account;
+
+public class AccountMapper {
+
+	public static Account mapToAccount(AccountDto  accountDto) {
+		
+		Account account =new Account(
+				accountDto.getId(),
+				accountDto.getAccountHolderName(),
+				accountDto.getBalance());
+		return Account;
+		
+	}
+}
